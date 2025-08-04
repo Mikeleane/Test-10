@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <title>To Be - Affirmative</title>
-  <script src="js/h5p-standalone-frame.min.js"></script>
-  <script src="js/h5p-standalone-main.min.js"></script>
+
+  <!-- H5P CSS -->
+  <link rel="stylesheet" href="styles/h5p.css" />
 </head>
 <body>
   <div id="h5p-container"></div>
+
+  <!-- H5P JavaScript -->
+  <script src="js/h5p-standalone-frame.min.js"></script>
+  <script src="js/h5p-standalone-main.min.js"></script>
+
   <script>
-    const h5pPlayer = new H5PStandalone.H5PPlayer(document.getElementById('h5p-container'));
-    h5pPlayer.setH5P('h5p/To Be - Affirmative.h5p'); // Adjust if the filename differs
+    window.addEventListener('load', () => {
+      const container = document.getElementById('h5p-container');
+      const h5pPlayer = new H5PStandalone.H5PPlayer(container);
+      h5pPlayer.setH5P('h5p/to-be-affirmative.h5p');
+    });
   </script>
 </body>
 </html>
