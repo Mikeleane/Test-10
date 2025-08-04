@@ -2,23 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>To Be - Affirmative</title>
-
-  <!-- H5P CSS -->
+  <title>H5P Standalone</title>
   <link rel="stylesheet" href="styles/h5p.css" />
-</head>
-<body>
-  <div id="h5p-container"></div>
-
-  <!-- H5P JavaScript -->
   <script src="js/h5p-standalone-frame.min.js"></script>
   <script src="js/h5p-standalone-main.min.js"></script>
+</head>
+<body>
+  <div class="h5p-container"></div>
 
   <script>
-    window.addEventListener('load', () => {
-      const container = document.getElementById('h5p-container');
-      const h5pPlayer = new H5PStandalone.H5PPlayer(container);
-      h5pPlayer.setH5P('h5p/to-be-affirmative.h5p');
+    new H5PStandalone.H5PStandalone(document.querySelector('.h5p-container'), {
+      h5pJsonPath: 'to-be-affirmative', // folder containing the unzipped .h5p
+      frameJs: 'js/h5p-standalone-frame.min.js',
+      frameCss: 'styles/h5p.css'
     });
   </script>
 </body>
