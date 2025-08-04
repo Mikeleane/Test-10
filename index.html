@@ -1,22 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link type="text/css" rel="stylesheet" media="all" href="../dist/styles/h5p.css" />
-  <meta charset="utf-8" />
-  <script type="text/javascript" src="../dist/js/h5p-standalone-main.min.js"></script>
-
-  <script type="text/javascript">
-    (function($) {
-      $(function() {
-        $('.h5p-container').h5p({
-          frameJs: '../dist/js/h5p-standalone-frame.min.js',
-          frameCss: '../dist/styles/h5p.css',
-          h5pContent: '../workspace'
-        });
-      });
-    })(H5P.jQuery);
-  </script>
+  <meta charset="UTF-8" />
+  <title>To Be - Affirmative</title>
+  <script src="js/h5p-standalone-frame.min.js"></script>
+  <script src="js/h5p-standalone-main.min.js"></script>
 </head>
-  <body>
-    <div class="h5p-container"></div>
-  </body>
+<body>
+  <div id="h5p-container"></div>
+  <script>
+    const h5pPlayer = new H5PStandalone.H5PPlayer(document.getElementById('h5p-container'));
+    h5pPlayer.setH5P('h5p/to-be-affirmative.h5p'); // Adjust if the filename differs
+  </script>
+</body>
 </html>
