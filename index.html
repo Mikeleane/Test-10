@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>H5P Standalone - To Be Affirmative</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css" />
-</head>
-<body>
-  <div class="h5p-container"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>H5P Standalone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css"
+    />
+  </head>
+  <body>
+    <div class="h5p-container"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/frame.bundle.js"></script>
-  <script>
-    new H5PStandalone.H5P(document.querySelector('.h5p-container'), {
-      h5pJsonPath: 'to-be-affirmative'
-    });
-  </script>
-</body>
+    <script>
+      // Required global object
+      window.H5PIntegration = {
+        baseUrl: ".",
+        url: "./to-be-infinitive",
+        contents: {
+          "cid-1": {
+            contentUrl: "./to-be-infinitive",
+            jsonContentPath: "./to-be-infinitive",
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/frame.bundle.js"></script>
+
+    <script>
+      new H5PStandalone.H5PStandalone(document.querySelector(".h5p-container"), {
+        h5pJsonPath: "to-be-infinitive",
+      });
+    </script>
+  </body>
 </html>
