@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>H5P Standalone - To Be Infinitive</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Be Affirmative</title>
+    <link rel="stylesheet" href="h5p-standalone/styles/h5p.css" />
+    <link rel="stylesheet" href="h5p-standalone/styles/h5p-confirmation-dialog.css" />
+    <link rel="stylesheet" href="h5p-standalone/styles/h5p-core-button.css" />
+  </head>
+  <body>
+    <div class="h5p-container"></div>
 
-  <!-- H5P Standalone CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css" />
-</head>
-<body>
-  <div class="h5p-container"></div>
-
-  <!-- H5P Standalone JS -->
-  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/frame.bundle.js"></script>
-
-  <!-- Initialize the H5P content -->
-  <script>
-    new H5PStandalone(document.querySelector(".h5p-container"), {
-      h5pJsonPath: "to-be-infinitive"
-    });
-  </script>
-</body>
+    <script src="h5p-standalone/main.bundle.js"></script>
+    <script>
+      new H5PStandalone.H5PStandalone(document.querySelector(".h5p-container"), {
+        h5pJsonPath: "to-be-affirmative",
+      });
+    </script>
+  </body>
 </html>
