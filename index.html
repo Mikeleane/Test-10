@@ -1,21 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>To Be - Affirmative</title>
-
-  <!-- H5P Standalone CSS from CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p-core-button.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p-confirmation-dialog.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Local H5P styles -->
+  <link rel="stylesheet" href="h5p-standalone/styles/h5p.css" />
+  <link rel="stylesheet" href="h5p-standalone/styles/h5p-core-button.css" />
+  <link rel="stylesheet" href="h5p-standalone/styles/h5p-confirmation-dialog.css" />
 </head>
 <body>
   <div class="h5p-container"></div>
 
-  <!-- H5P Standalone JS from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/main.bundle.js"></script>
-
+  <!-- Local H5P script -->
+  <script src="h5p-standalone/main.bundle.js"></script>
+  
   <script>
     new H5PStandalone(document.querySelector(".h5p-container"), {
       h5pJsonPath: "to-be-affirmative"
