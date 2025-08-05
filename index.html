@@ -2,18 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>H5P Standalone</title>
-  <link rel="stylesheet" href="h5p-standalone/styles/h5p.css" />
+  <title>H5P Standalone - To Be Affirmative</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/styles/h5p.css" />
 </head>
 <body>
   <div class="h5p-container"></div>
 
-  <script src="h5p-standalone/main/h5p-standalone-main.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/h5p-standalone@latest/dist/frame.bundle.js"></script>
   <script>
     new H5PStandalone.H5P(document.querySelector('.h5p-container'), {
-      h5pJsonPath: "to-be-affirmative",
-      frameJs: "h5p-standalone/main/h5p-standalone-frame.min.js",
-      frameCss: "h5p-standalone/styles/h5p.css"
+      h5pJsonPath: "to-be-affirmative" // must match the unzipped .h5p folder name
     });
   </script>
 </body>
